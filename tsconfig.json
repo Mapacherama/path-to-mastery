@@ -8,9 +8,9 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "baseUrl": ".",
+    "baseUrl": "./src",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["*"]
     }
   },
   "include": [
@@ -18,5 +18,8 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "src/**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }
