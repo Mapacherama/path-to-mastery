@@ -1,17 +1,21 @@
-import './assets/main.css'
+/**
+ * main.ts
+ *
+ * Bootstraps Vuetify and other plugins then mounts the App`
+ */
 
+// Plugins
+import { registerPlugins } from '@/plugins'
+
+// Components
+import App from './App.vue'
+import './assets/main.css';
+
+// Composables
 import { createApp } from 'vue'
-import { createPinia } from 'pinia'
-
-import router from './router'
-import App from './App.vue' 
-import PrimeVue from 'primevue/config';
-import BullsTheme from './themes/bulls-theme';
 
 const app = createApp(App)
-app.use(PrimeVue, { theme: { preset: BullsTheme } });
 
-app.use(createPinia())
-app.use(router)
+registerPlugins(app)
 
 app.mount('#app')
