@@ -27,7 +27,7 @@
             </p>
           </v-col>
           <v-col cols="12" md="6">
-            <v-img src="@/assets/about-image.jpg" height="300px" contain></v-img>
+            <v-img src="@/assets/about.webp" height="300px" contain></v-img>
           </v-col>
         </v-row>
       </v-container>
