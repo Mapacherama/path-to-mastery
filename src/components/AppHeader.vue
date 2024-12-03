@@ -13,17 +13,16 @@
     <!-- Navigation Links -->
     <v-spacer></v-spacer>
     <v-btn text class="mx-2 white--text" href="#about">About</v-btn>
-    <v-btn text class="mx-2 white--text" href="#blog">Blog</v-btn>
-    <v-btn text class="mx-2 white--text" href="#travel-tips">Travel Tips</v-btn>
+    <v-btn text class="mx-2 white--text" href="#journaling">journaling</v-btn>
+    <v-btn text class="mx-2 white--text" href="#routine">Routine</v-btn>
     <v-btn text class="mx-2 white--text" href="#destinations">Destinations</v-btn>
-    <v-btn text class="mx-2 white--text" href="#resources">Resources</v-btn>
-    <v-btn text class="mx-2 white--text" href="#books">Books</v-btn>
+    <v-btn text class="mx-2 white--text" href="#philosophy">Philosophy</v-btn>
+    <v-btn text class="mx-2 white--text" href="#religion">Religion</v-btn>
 
     <!-- Social Media Icons -->
-    <v-icon class="mx-2 white--text">mdi-facebook</v-icon>
-    <v-icon class="mx-2 white--text">mdi-twitter</v-icon>
+    <v-icon class="mx-2 white--text">mdi-linkedin</v-icon>
+      <v-icon class="mx-2 white--text">mdi-github</v-icon>
     <v-icon class="mx-2 white--text">mdi-instagram</v-icon>
-    <v-icon class="mx-2 white--text">mdi-tiktok</v-icon>
 
     <!-- Search Field -->
     <v-text-field
