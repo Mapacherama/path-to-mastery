@@ -1,19 +1,48 @@
 <template>
   <v-toolbar class="elevation-8" color="grey-darken-3" dark>
-    <v-btn icon @click="toggleDrawer">
-      <v-icon>mdi-menu</v-icon>
-    </v-btn>
-    <v-toolbar-title>Path to Mastery</v-toolbar-title>
+    <!-- Logo Section -->
+    <v-toolbar-title>
+      <img
+        src="@/assets/logo.png"
+        alt="Path to Mastery Logo"
+        style="height: 36px; margin-right: 16px;"
+      />
+      Path to Mastery
+    </v-toolbar-title>
+
+    <!-- Navigation Links -->
     <v-spacer></v-spacer>
-    <v-btn icon>
-      <v-icon>mdi-magnify</v-icon>
-    </v-btn>
+    <v-btn text class="mx-2 white--text" href="#about">About</v-btn>
+    <v-btn text class="mx-2 white--text" href="#blog">Blog</v-btn>
+    <v-btn text class="mx-2 white--text" href="#travel-tips">Travel Tips</v-btn>
+    <v-btn text class="mx-2 white--text" href="#destinations">Destinations</v-btn>
+    <v-btn text class="mx-2 white--text" href="#resources">Resources</v-btn>
+    <v-btn text class="mx-2 white--text" href="#books">Books</v-btn>
+
+    <!-- Social Media Icons -->
+    <v-icon class="mx-2 white--text">mdi-facebook</v-icon>
+    <v-icon class="mx-2 white--text">mdi-twitter</v-icon>
+    <v-icon class="mx-2 white--text">mdi-instagram</v-icon>
+    <v-icon class="mx-2 white--text">mdi-tiktok</v-icon>
+
+    <!-- Search Field -->
+    <v-text-field
+      dense
+      outlined
+      hide-details
+      placeholder="Search this site"
+      class="ml-4"
+      append-icon="mdi-magnify"
+      color="white"
+      solo-inverted
+    ></v-text-field>
   </v-toolbar>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue';
 
+// Ref for drawer (if needed for additional functionality in the future)
 const drawer = ref(false);
 
 const toggleDrawer = () => {
