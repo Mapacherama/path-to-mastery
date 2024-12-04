@@ -14,10 +14,11 @@
     <v-spacer></v-spacer>
     <v-btn text class="mx-2 white--text" href="#about">About</v-btn>
     <v-btn text class="mx-2 white--text" href="#journaling">journaling</v-btn>
+    <v-btn text class="mx-2 white--text" href="#digitalSamurai">Digital Samurai Concept</v-btn>
     <v-btn text class="mx-2 white--text" href="#routine">Routine</v-btn>
     <v-btn text class="mx-2 white--text" href="#destinations">Destinations</v-btn>
     <v-btn text class="mx-2 white--text" href="#philosophy">Philosophy</v-btn>
-    <v-btn text class="mx-2 white--text" href="#religion">Religion</v-btn>
+    <v-btn text class="mx-2 white--text" href="#inspirations">Inspirations</v-btn>
 
     <!-- Social Media Icons -->
     <v-icon class="mx-2 white--text">mdi-linkedin</v-icon>
