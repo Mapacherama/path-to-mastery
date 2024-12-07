@@ -4,7 +4,7 @@
       <!-- Hero Section -->
       <v-container fluid class="pa-0">
         <v-img src="@/assets/hero-image.jpg" height="500px" class="white--text d-flex align-center justify-center">
-          <div class="text-center">
+          <div class="text-center hero-overlay">
             <h1 class="display-2 font-weight-bold mb-4 hover-text">Path to Mastery</h1>
             <p class="subtitle-1 mb-4 hover-text">
               Inspiring individuals to think differently, act boldly, and live authentically.
@@ -66,17 +66,21 @@
           </v-col>
         </v-row>
       </v-container>
+      
       <v-container fluid class="pa-0">
         <v-img
-          src="@/assets/hero-experience-suffering.jpg"
+          src="@/assets/hero-experience-suffering.png"
           height="500px"
           class="white--text d-flex align-center justify-center hero-suffering"
         >
           <div class="hero-overlay">
-            <h1 class="hero-title">Gaining Life Experience Through Suffering</h1>
-    </div>
-  </v-img>
-</v-container>
+            <h1 class="hero-title hover-text">True greatness is forged in the fires of adversity</h1>
+            <blockquote class="subtitle-2 italic mb-4 hover-text">
+              Heroism lies in the struggle, for without it, no man can claim the glory of transformation.
+            </blockquote>
+          </div>
+        </v-img>
+      </v-container>
     </v-main>
   </v-app>
 </template>
@@ -89,6 +93,8 @@ import buddhismImage from '@/assets/buddhism.webp';
 import kobeImage from '@/assets/kobe.jpg';
 import jordanImage from '@/assets/Michael-Jordan-and-Bad-Boys-Pistons.jpg';
 import marcusImage from '@/assets/Marcus Aurelius.webp';
+import musashiImage from '@/assets/Musashi.webp';
+import gogginsImage from '@/assets/goggins.jpeg';
 
 const philosophies = ref([
   {
@@ -110,9 +116,9 @@ const philosophies = ref([
 
 const inspirationalPeople = ref([
   {
-    name: 'Marcus Aurelius',
-    description: 'Marcus Aurelius, a philosopher-king, exemplified Stoic virtue by mastering himself and guiding his subjects with wisdom and compassion, teaching that true strength lies in serving the greater good amidst life\'s adversities.',
-    image: marcusImage,
+    name: 'David Goggins',
+    description: 'A former Navy SEAL and ultra-endurance athlete, David Goggins is known for his incredible mental toughness and resilience, inspiring others to push beyond their limits and embrace discomfort for personal growth.',
+    image: gogginsImage
   },
   {
     name: 'Michael Jordan',
@@ -125,14 +131,14 @@ const inspirationalPeople = ref([
     image: kobeImage,
   },
   {
-    name: 'Kobe Bryant',
-    description: 'An iconic basketball player known for his work ethic and competitive spirit.',
-    image: kobeImage,
+    name: 'Miyamoto Musashi',
+    description: 'A legendary swordsman and philosopher, known for his unique double-bladed swordsmanship and profound insights on strategy and life.',
+    image: musashiImage,
   },
   {
-    name: 'Kobe Bryant',
-    description: 'An iconic basketball player known for his work ethic and competitive spirit.',
-    image: kobeImage,
+    name: 'Marcus Aurelius',
+    description: 'Marcus Aurelius, a philosopher-king, exemplified Stoic virtue by mastering himself and guiding his subjects with wisdom and compassion, teaching that true strength lies in serving the greater good amidst life\'s adversities.',
+    image: marcusImage,
   },
 ]);
 
@@ -189,15 +195,22 @@ const explore = () => {
 }
 
 .hover-text:hover {
-  color: #ff4081;
+  color: #8A0000; 
   transform: scale(1.05);
 }
 
+/* Inspirational Person Styling */
 .inspirational-person {
   position: relative;
   overflow: hidden;
   margin-bottom: 20px;
+  width: 300px; /* Adjust as needed */
+}
+
+.banner-image {
   width: 100%;
+  height: 450px;
+  object-fit: cover;
 }
 
 .inspirational-person .overlay {
@@ -206,8 +219,7 @@ const explore = () => {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -217,37 +229,47 @@ const explore = () => {
 }
 
 .inspirational-person:hover .overlay {
-  opacity: 1;
+  opacity: 1; /* Show the overlay on hover */
 }
 
-.inspirational-person h3 {
-  margin: 0;
-}
-
-.inspirational-person p {
+.overlay h3, .overlay p {
   text-align: center;
+  margin: 0;
+  color: white; /* Ensure text is readable */
 }
 
+.overlay h3 {
+  font-size: 1.5rem; /* Adjust as needed */
+  margin-bottom: 0.5rem; /* Space between title and paragraph */
+}
+
+.overlay p {
+  font-size: 1rem; /* Adjust font size for description */
+  line-height: 1.4; /* Improve readability */
+}
+
+/* Banner Section */
 .banner-images {
   display: flex;
   justify-content: center;
   gap: 5px;
 }
 
-.inspirational-person {
-  position: relative;
-  overflow: hidden;
-  width: 300px;
-}
-
-.banner-image {
-  width: 100%;
-  height: 450px;
-  object-fit: cover;
-}
-
-.overlay h3, .overlay p {
+/* Hero Section Overlay */
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
+  color: white;
+}
+
+.hero-title {
+  margin: 0;
+}
+
+.subtitle-2 {
   margin: 0;
 }
 </style>
