@@ -14,7 +14,7 @@
     <v-spacer></v-spacer>
     <v-btn text class="mx-2 white--text" href="#about">About</v-btn>
     <v-btn text class="mx-2 white--text" href="#journaling">journaling</v-btn>
-    <v-btn text class="mx-2 white--text" href="#digitalSamurai">Digital Samurai Concept</v-btn>
+    <v-btn text class="mx-2 white--text" href="#digitalSamurai">Digital Samurai</v-btn>
     <v-btn text class="mx-2 white--text" href="#routine">Routine</v-btn>
     <v-btn text class="mx-2 white--text" href="#destinations">Destinations</v-btn>
     <v-btn text class="mx-2 white--text" href="#philosophy">Philosophy</v-btn>
@@ -25,17 +25,7 @@
       <v-icon class="mx-2 white--text">mdi-github</v-icon>
     <v-icon class="mx-2 white--text">mdi-instagram</v-icon>
 
-    <!-- Search Field -->
-    <v-text-field
-      dense
-      outlined
-      hide-details
-      placeholder="Search this site"
-      class="ml-4"
-      append-icon="mdi-magnify"
-      color="white"
-      solo-inverted
-    ></v-text-field>
+    
   </v-toolbar>
 </template>
 

@@ -5,8 +5,8 @@
       <v-container fluid class="pa-0">
         <v-img src="@/assets/hero-image.jpg" height="500px" class="white--text d-flex align-center justify-center">
           <div class="text-center">
-            <h1 class="display-2 font-weight-bold mb-4">Path to Mastery</h1>
-            <p class="subtitle-1 mb-4">
+            <h1 class="display-2 font-weight-bold mb-4 hover-text">Path to Mastery</h1>
+            <p class="subtitle-1 mb-4 hover-text">
               Inspiring individuals to think differently, act boldly, and live authentically.
             </p>
             <v-btn color="primary" large @click="explore">Explore More</v-btn>
@@ -38,28 +38,9 @@
         <v-row>
           <v-col cols="12" md="4" v-for="(philosophy, index) in philosophies" :key="index">
             <v-card>
-              <v-img :src="philosophy.image" height="200px"></v-img>
+              <v-img :src="philosophy.image" height="200px" contain></v-img>
               <v-card-title>{{ philosophy.title }}</v-card-title>
               <v-card-text>{{ philosophy.description }}</v-card-text>
-            </v-card>
-          </v-col>
-        </v-row>
-      </v-container>
-
-      <!-- Contact Section -->
-      <v-container class="py-10" id="contact">
-        <h2 class="text-center mb-6">Get in Touch</h2>
-        <v-row justify="center">
-          <v-col cols="12" md="8">
-            <v-card>
-              <v-card-text>
-                <v-form>
-                  <v-text-field label="Name" required></v-text-field>
-                  <v-text-field label="Email" required></v-text-field>
-                  <v-textarea label="Message" required></v-textarea>
-                  <v-btn color="primary" @click="sendMessage">Send Message</v-btn>
-                </v-form>
-              </v-card-text>
             </v-card>
           </v-col>
         </v-row>
@@ -70,22 +51,25 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import dokkodoImage from '@/assets/dokkodo.webp';
+import stoicismImage from '@/assets/stoicism.webp';
+import buddhismImage from '@/assets/buddhism.webp';
 
 const philosophies = ref([
   {
     title: 'Musashi’s Dokkōdō',
     description: 'Embrace the way of walking alone, focusing on self-reliance and inner strength.',
-    image: '@/assets/dokkodo.webp',
+    image: dokkodoImage,
   },
   {
     title: 'Stoicism',
     description: 'Cultivate resilience and virtue through mindful practices and rational thinking.',
-    image: '@/assets/stoicism.webp',
+    image: stoicismImage,
   },
   {
     title: 'Buddhism',
     description: 'Seek enlightenment and inner peace through understanding and compassion.',
-    image: '@/assets/buddhism.webp',
+    image: buddhismImage,
   },
 ]);
 
@@ -96,9 +80,6 @@ const explore = () => {
   }
 };
 
-const sendMessage = () => {
-  console.log('Message sent');
-};
 </script>
 
 <style scoped>
@@ -138,5 +119,14 @@ const sendMessage = () => {
 .py-10 {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+}
+
+.hover-text {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.hover-text:hover {
+  color: #ff4081;
+  transform: scale(1.05);
 }
 </style>
