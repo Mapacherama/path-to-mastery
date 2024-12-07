@@ -50,12 +50,20 @@
       <v-container class="py-10" id="inspirational-people">
         <h2 class="text-center mb-6">People Who Inspire Me</h2>
         <v-row>
-          <v-col cols="12" md="4" v-for="(person, index) in inspirationalPeople" :key="index">
-            <v-card>
-              <v-img :src="person.image" height="200px" contain></v-img>
-              <v-card-title>{{ person.name }}</v-card-title>
-              <v-card-text>{{ person.description }}</v-card-text>
-            </v-card>
+          <v-col
+            v-for="(person, index) in inspirationalPeople"
+            :key="index"
+            cols="12"
+            md="4"
+            class="d-flex align-center justify-center"
+          >
+            <div class="inspirational-person">
+              <v-img :src="person.image" height="300px" contain></v-img>
+              <div class="overlay">
+                <h3>{{ person.name }}</h3>
+                <p>{{ person.description }}</p>
+              </div>
+            </div>
           </v-col>
         </v-row>
       </v-container>
@@ -68,9 +76,6 @@ import { ref } from 'vue';
 import dokkodoImage from '@/assets/dokkodo.webp';
 import stoicismImage from '@/assets/stoicism.webp';
 import buddhismImage from '@/assets/buddhism.webp';
-import romeImage from '@/assets/rome.jpg';
-import hawaiiImage from '@/assets/hawaii.jpg';
-import thailandImage from '@/assets/thailand.jpg';
 import kobeImage from '@/assets/kobe.jpg';
 import jordanImage from '@/assets/jordan.jpg';
 import muskImage from '@/assets/musk.jpg';
@@ -166,5 +171,38 @@ const explore = () => {
 .hover-text:hover {
   color: #ff4081;
   transform: scale(1.05);
+}
+
+.inspirational-person {
+  position: relative;
+  overflow: hidden;
+}
+
+.inspirational-person .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.inspirational-person:hover .overlay {
+  opacity: 1; /* Show overlay on hover */
+}
+
+.inspirational-person h3 {
+  margin: 0;
+}
+
+.inspirational-person p {
+  text-align: center;
 }
 </style>
