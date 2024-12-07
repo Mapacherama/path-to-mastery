@@ -49,16 +49,15 @@
       <!-- People Who Inspire Me Section -->
       <v-container class="py-10" id="inspirational-people">
         <h2 class="text-center mb-6">People Who Inspire Me</h2>
-        <v-row>
+        <v-row class="banner-images">
           <v-col
             v-for="(person, index) in inspirationalPeople"
             :key="index"
-            cols="12"
-            md="4"
+            cols="auto"
             class="d-flex align-center justify-center"
           >
             <div class="inspirational-person">
-              <v-img :src="person.image" height="300px" contain></v-img>
+              <img :src="person.image" class="banner-image" />
               <div class="overlay">
                 <h3>{{ person.name }}</h3>
                 <p>{{ person.description }}</p>
@@ -67,6 +66,17 @@
           </v-col>
         </v-row>
       </v-container>
+      <v-container fluid class="pa-0">
+        <v-img
+          src="@/assets/hero-experience-suffering.jpg"
+          height="500px"
+          class="white--text d-flex align-center justify-center hero-suffering"
+        >
+          <div class="hero-overlay">
+            <h1 class="hero-title">Gaining Life Experience Through Suffering</h1>
+    </div>
+  </v-img>
+</v-container>
     </v-main>
   </v-app>
 </template>
@@ -77,8 +87,8 @@ import dokkodoImage from '@/assets/dokkodo.webp';
 import stoicismImage from '@/assets/stoicism.webp';
 import buddhismImage from '@/assets/buddhism.webp';
 import kobeImage from '@/assets/kobe.jpg';
-import jordanImage from '@/assets/jordan.jpg';
-import muskImage from '@/assets/musk.jpg';
+import jordanImage from '@/assets/Michael-Jordan-and-Bad-Boys-Pistons.jpg';
+import marcusImage from '@/assets/Marcus Aurelius.webp';
 
 const philosophies = ref([
   {
@@ -100,9 +110,9 @@ const philosophies = ref([
 
 const inspirationalPeople = ref([
   {
-    name: 'Kobe Bryant',
-    description: 'An iconic basketball player known for his work ethic and competitive spirit.',
-    image: kobeImage,
+    name: 'Marcus Aurelius',
+    description: 'Marcus Aurelius, a philosopher-king, exemplified Stoic virtue by mastering himself and guiding his subjects with wisdom and compassion, teaching that true strength lies in serving the greater good amidst life\'s adversities.',
+    image: marcusImage,
   },
   {
     name: 'Michael Jordan',
@@ -110,9 +120,19 @@ const inspirationalPeople = ref([
     image: jordanImage,
   },
   {
-    name: 'Elon Musk',
-    description: 'A visionary entrepreneur known for his work with Tesla and SpaceX, pushing the boundaries of technology.',
-    image: muskImage,
+    name: 'Kobe Bryant',
+    description: 'An iconic basketball player known for his work ethic and competitive spirit.',
+    image: kobeImage,
+  },
+  {
+    name: 'Kobe Bryant',
+    description: 'An iconic basketball player known for his work ethic and competitive spirit.',
+    image: kobeImage,
+  },
+  {
+    name: 'Kobe Bryant',
+    description: 'An iconic basketball player known for his work ethic and competitive spirit.',
+    image: kobeImage,
   },
 ]);
 
@@ -176,6 +196,8 @@ const explore = () => {
 .inspirational-person {
   position: relative;
   overflow: hidden;
+  margin-bottom: 20px;
+  width: 100%;
 }
 
 .inspirational-person .overlay {
@@ -184,7 +206,7 @@ const explore = () => {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   display: flex;
   flex-direction: column;
@@ -195,7 +217,7 @@ const explore = () => {
 }
 
 .inspirational-person:hover .overlay {
-  opacity: 1; /* Show overlay on hover */
+  opacity: 1;
 }
 
 .inspirational-person h3 {
@@ -204,5 +226,28 @@ const explore = () => {
 
 .inspirational-person p {
   text-align: center;
+}
+
+.banner-images {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.inspirational-person {
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+}
+
+.banner-image {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+.overlay h3, .overlay p {
+  text-align: center;
+  margin: 0;
 }
 </style>
