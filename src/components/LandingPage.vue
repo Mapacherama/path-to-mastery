@@ -67,6 +67,7 @@
         </v-row>
       </v-container>
       
+      <!-- Suffering Section -->
       <v-container fluid class="pa-0">
         <v-img
           src="@/assets/hero-experience-suffering.png"
