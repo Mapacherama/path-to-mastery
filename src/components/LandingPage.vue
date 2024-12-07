@@ -45,6 +45,20 @@
           </v-col>
         </v-row>
       </v-container>
+
+      <!-- People Who Inspire Me Section -->
+      <v-container class="py-10" id="inspirational-people">
+        <h2 class="text-center mb-6">People Who Inspire Me</h2>
+        <v-row>
+          <v-col cols="12" md="4" v-for="(person, index) in inspirationalPeople" :key="index">
+            <v-card>
+              <v-img :src="person.image" height="200px" contain></v-img>
+              <v-card-title>{{ person.name }}</v-card-title>
+              <v-card-text>{{ person.description }}</v-card-text>
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-container>
     </v-main>
   </v-app>
 </template>
@@ -54,6 +68,12 @@ import { ref } from 'vue';
 import dokkodoImage from '@/assets/dokkodo.webp';
 import stoicismImage from '@/assets/stoicism.webp';
 import buddhismImage from '@/assets/buddhism.webp';
+import romeImage from '@/assets/rome.jpg';
+import hawaiiImage from '@/assets/hawaii.jpg';
+import thailandImage from '@/assets/thailand.jpg';
+import kobeImage from '@/assets/kobe.jpg';
+import jordanImage from '@/assets/jordan.jpg';
+import muskImage from '@/assets/musk.jpg';
 
 const philosophies = ref([
   {
@@ -70,6 +90,24 @@ const philosophies = ref([
     title: 'Buddhism',
     description: 'Seek enlightenment and inner peace through understanding and compassion.',
     image: buddhismImage,
+  },
+]);
+
+const inspirationalPeople = ref([
+  {
+    name: 'Kobe Bryant',
+    description: 'An iconic basketball player known for his work ethic and competitive spirit.',
+    image: kobeImage,
+  },
+  {
+    name: 'Michael Jordan',
+    description: 'Regarded as one of the greatest basketball players of all time, known for his leadership and skill.',
+    image: jordanImage,
+  },
+  {
+    name: 'Elon Musk',
+    description: 'A visionary entrepreneur known for his work with Tesla and SpaceX, pushing the boundaries of technology.',
+    image: muskImage,
   },
 ]);
 
