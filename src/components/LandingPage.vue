@@ -3,11 +3,18 @@
     <v-main>
       <!-- Hero Section -->
       <v-container fluid class="pa-0">
-        <v-img src="@/assets/hero-image.jpg" height="500px" class="white--text d-flex align-center justify-center">
+        <v-img
+          src="@/assets/hero-image.jpg"
+          height="500px"
+          class="white--text d-flex align-center justify-center"
+        >
           <div class="text-center hero-overlay">
-            <h1 class="display-2 font-weight-bold mb-4 hover-text">Path to Mastery</h1>
+            <h1 class="display-2 font-weight-bold mb-4 hover-text">
+              Path to Mastery
+            </h1>
             <p class="subtitle-1 mb-4 hover-text">
-              Inspiring individuals to think differently, act boldly, and live authentically.
+              Inspiring individuals to think differently, act boldly, and live
+              authentically.
             </p>
             <v-btn color="primary" large @click="explore">Explore More</v-btn>
           </div>
@@ -20,10 +27,25 @@
           <v-col cols="12" md="6">
             <h2>About Us</h2>
             <p>
-              Path to Mastery is a platform designed to inspire individuals to think differently, act boldly, and live authentically. Rooted in the principles of Musashi’s Dokkōdō, Stoicism, Shintoism, and Buddhism, this project reflects a personal journey toward self-mastery and deliberate living.
+              Path to Mastery is a platform designed to inspire individuals to
+              think differently, act boldly, and live authentically. Rooted in
+              the principles of Musashi’s Dokkōdō, Stoicism, Shintoism, and
+              Buddhism, this project reflects a personal journey toward
+              self-mastery and deliberate living.
             </p>
             <p>
-              We blend philosophy, visual inspiration, and interactive tools to challenge societal norms and help others embark on their own paths of growth, discipline, and authenticity.
+              This platform is forged from my journey—like running a marathon
+              alone, fasting, and fueled only by discipline and the refusal to
+              quit.
+            </p>
+            <p>
+              It’s a testament to the power of resilience and relentless
+              self-belief.
+            </p>
+            <p>
+              We blend philosophy, visual inspiration, and interactive tools to
+              challenge societal norms and help others embark on their own paths
+              of growth, discipline, and authenticity.
             </p>
           </v-col>
           <v-col cols="12" md="6">
@@ -36,7 +58,12 @@
       <v-container class="py-10" id="philosophy">
         <h2 class="text-center mb-6">Our Philosophy</h2>
         <v-row>
-          <v-col cols="12" md="4" v-for="(philosophy, index) in philosophies" :key="index">
+          <v-col
+            cols="12"
+            md="4"
+            v-for="(philosophy, index) in philosophies"
+            :key="index"
+          >
             <v-card>
               <v-img :src="philosophy.image" height="200px" contain></v-img>
               <v-card-title>{{ philosophy.title }}</v-card-title>
@@ -66,7 +93,25 @@
           </v-col>
         </v-row>
       </v-container>
-      
+
+      <!-- Digital Samurai Section -->
+      <v-container fluid class="py-10">
+        <v-img
+          src="@/assets/Digital-Samurai.webp"
+          height="600px"
+          class="white--text d-flex align-center justify-center"
+        >
+          <div class="hero-overlay">
+            <h1 class="hero-title hover-text">The Digital Samurai</h1>
+            <blockquote class="subtitle-2 italic mb-4 hover-text">
+              "Mastery is not just about the blade, but about the spirit and the
+              mind navigating the digital dojo."
+            </blockquote>
+            <v-btn color="primary" large> Learn the Way </v-btn>
+          </div>
+        </v-img>
+      </v-container>
+
       <!-- Suffering Section -->
       <v-container fluid class="pa-0">
         <v-img
@@ -75,10 +120,16 @@
           class="white--text d-flex align-center justify-center hero-suffering"
         >
           <div class="hero-overlay">
-            <h1 class="hero-title hover-text">True greatness is forged in the fires of adversity</h1>
+            <h1 class="hero-title hover-text">
+              True greatness is forged in the fires of adversity
+            </h1>
             <blockquote class="subtitle-2 italic mb-4 hover-text">
-              Heroism lies in the struggle, for without it, no man can claim the glory of transformation.
+              Heroism lies in the struggle, for without it, no man can claim the
+              glory of transformation.
             </blockquote>
+            <v-btn color="primary" large class="mt-4">
+              Step into your transformation.
+            </v-btn>
           </div>
         </v-img>
       </v-container>
@@ -87,69 +138,76 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import dokkodoImage from '@/assets/dokkodo.webp';
-import stoicismImage from '@/assets/stoicism.webp';
-import buddhismImage from '@/assets/buddhism.webp';
-import kobeImage from '@/assets/kobe.jpg';
-import jordanImage from '@/assets/Michael-Jordan-and-Bad-Boys-Pistons.jpg';
-import marcusImage from '@/assets/Marcus Aurelius.webp';
-import musashiImage from '@/assets/Musashi.webp';
-import gogginsImage from '@/assets/goggins.jpeg';
+import { ref } from "vue";
+import dokkodoImage from "@/assets/dokkodo.webp";
+import stoicismImage from "@/assets/stoicism.webp";
+import buddhismImage from "@/assets/buddhism.webp";
+import kobeImage from "@/assets/kobe.jpg";
+import jordanImage from "@/assets/Michael-Jordan-and-Bad-Boys-Pistons.jpg";
+import marcusImage from "@/assets/Marcus Aurelius.webp";
+import musashiImage from "@/assets/Musashi.webp";
+import gogginsImage from "@/assets/goggins.jpeg";
 
 const philosophies = ref([
   {
-    title: 'Musashi’s Dokkōdō',
-    description: 'Embrace the way of walking alone, focusing on self-reliance and inner strength.',
+    title: "Musashi’s Dokkōdō",
+    description:
+      "Embrace the way of walking alone, focusing on self-reliance and inner strength.",
     image: dokkodoImage,
   },
   {
-    title: 'Stoicism',
-    description: 'Cultivate resilience and virtue through mindful practices and rational thinking.',
+    title: "Stoicism",
+    description:
+      "Cultivate resilience and virtue through mindful practices and rational thinking.",
     image: stoicismImage,
   },
   {
-    title: 'Buddhism',
-    description: 'Seek enlightenment and inner peace through understanding and compassion.',
+    title: "Buddhism",
+    description:
+      "Seek enlightenment and inner peace through understanding and compassion.",
     image: buddhismImage,
   },
 ]);
 
 const inspirationalPeople = ref([
   {
-    name: 'David Goggins',
-    description: 'A former Navy SEAL and ultra-endurance athlete, David Goggins is known for his incredible mental toughness and resilience, inspiring others to push beyond their limits and embrace discomfort for personal growth.',
-    image: gogginsImage
+    name: "David Goggins",
+    description:
+      "A former Navy SEAL and ultra-endurance athlete, David Goggins is known for his incredible mental toughness and resilience, inspiring others to push beyond their limits and embrace discomfort for personal growth.",
+    image: gogginsImage,
   },
   {
-    name: 'Michael Jordan',
-    description: 'Regarded as one of the greatest basketball players of all time, known for his leadership and skill.',
+    name: "Michael Jordan",
+    description:
+      "Regarded as one of the greatest basketball players of all time, known for his leadership and skill.",
     image: jordanImage,
   },
   {
-    name: 'Kobe Bryant',
-    description: 'An iconic basketball player known for his work ethic and competitive spirit.',
+    name: "Kobe Bryant",
+    description:
+      "An iconic basketball player known for his work ethic and competitive spirit.",
     image: kobeImage,
   },
   {
-    name: 'Miyamoto Musashi',
-    description: 'A legendary swordsman and philosopher, known for his unique double-bladed swordsmanship and profound insights on strategy and life.',
+    name: "Miyamoto Musashi",
+    description:
+      "A legendary swordsman and philosopher, known for his unique double-bladed swordsmanship and profound insights on strategy and life.",
     image: musashiImage,
   },
   {
-    name: 'Marcus Aurelius',
-    description: 'Marcus Aurelius, a philosopher-king, exemplified Stoic virtue by mastering himself and guiding his subjects with wisdom and compassion, teaching that true strength lies in serving the greater good amidst life\'s adversities.',
+    name: "Marcus Aurelius",
+    description:
+      "Marcus Aurelius, a philosopher-king, exemplified Stoic virtue by mastering himself and guiding his subjects with wisdom and compassion, teaching that true strength lies in serving the greater good amidst life's adversities.",
     image: marcusImage,
   },
 ]);
 
 const explore = () => {
-  const philosophySection = document.getElementById('philosophy');
+  const philosophySection = document.getElementById("philosophy");
   if (philosophySection) {
-    philosophySection.scrollIntoView({ behavior: 'smooth' });
+    philosophySection.scrollIntoView({ behavior: "smooth" });
   }
 };
-
 </script>
 
 <style scoped>
@@ -160,7 +218,7 @@ const explore = () => {
 }
 
 .v-img::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -196,7 +254,7 @@ const explore = () => {
 }
 
 .hover-text:hover {
-  color: #8A0000; 
+  color: #8a0000;
   transform: scale(1.05);
 }
 
@@ -233,7 +291,8 @@ const explore = () => {
   opacity: 1; /* Show the overlay on hover */
 }
 
-.overlay h3, .overlay p {
+.overlay h3,
+.overlay p {
   text-align: center;
   margin: 0;
   color: white; /* Ensure text is readable */
