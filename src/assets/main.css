@@ -1,7 +1,5 @@
-/* Import Vuetify's CSS */
 @import "vuetify/dist/vuetify.min.css";
 
-/* Tailwind CSS */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -24,6 +22,17 @@ p {
   letter-spacing: 0.5px;
 }
 
+.social-icon {
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.social-icon:hover {
+  color: #8a0000;
+  transform: scale(1.2);
+}
+
 .btn {
   background-color: #8a0000;
   color: white;
@@ -41,17 +50,33 @@ p {
 }
 
 .btn-purple {
-  background-color: #6a0dad; /* Purple color */
+  background-color: #6a0dad;
   color: white;
   padding: 12px 24px;
   border-radius: 8px;
   font-weight: bold;
   font-size: 1rem;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Adds depth */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 .btn-purple:hover {
-  background-color: #8b3eb2; /* Slightly lighter purple */
+  background-color: #8b3eb2;
+  transform: scale(1.05);
+}
+
+.btn-black {
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out, color 0.3s ease-in-out,
+    background-color 0.2s ease-in-out;
+}
+
+.btn-black:hover {
+  color: #8a0000;
   transform: scale(1.05);
 }
