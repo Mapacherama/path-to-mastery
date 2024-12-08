@@ -16,7 +16,7 @@
               Inspiring individuals to think differently, act boldly, and live
               authentically.
             </p>
-            <v-btn color="primary" large @click="explore">Explore More</v-btn>
+            <v-btn class="btn" large @click="explore">Explore More</v-btn>
           </div>
         </v-img>
       </v-container>
@@ -101,15 +101,23 @@
         <v-img
           src="@/assets/Digital-Samurai.webp"
           height="600px"
-          class="white--text d-flex align-center justify-center"
+          class="white--text d-flex align-center justify-center digital-samurai-section"
         >
+          <!-- Dark Overlay -->
+          <!-- <div class="image-overlay"></div> -->
+
           <div class="hero-overlay">
+            <!-- Title -->
             <h1 class="hero-title hover-text">The Digital Samurai</h1>
+
+            <!-- Quote -->
             <blockquote class="subtitle-2 italic mb-4 hover-text">
               "Mastery is not just about the blade, but about the spirit and the
               mind navigating the digital dojo."
             </blockquote>
-            <v-btn color="primary" large> Learn the Way </v-btn>
+
+            <!-- Button -->
+            <v-btn class="btn-purple" large> Enter the Digital Dojo </v-btn>
           </div>
         </v-img>
       </v-container>
@@ -129,7 +137,7 @@
               Heroism lies in the struggle, for without it, no man can claim the
               glory of transformation.
             </blockquote>
-            <v-btn color="primary" large class="mt-4">
+            <v-btn class="btn mt-4" large>
               Step into your transformation.
             </v-btn>
           </div>
@@ -213,9 +221,7 @@ const explore = () => {
 </script>
 
 <style scoped>
-h2 {
-  animation: fadeIn 1s ease-in-out;
-}
+/* General Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -225,6 +231,11 @@ h2 {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* General Styling */
+h2 {
+  animation: fadeIn 1s ease-in-out;
 }
 
 p {
@@ -236,17 +247,6 @@ p {
   max-width: 700px;
   margin: 0 auto;
   text-align: left;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .v-img {
@@ -296,12 +296,73 @@ p {
   transform: scale(1.05);
 }
 
-/* Inspirational Person Styling */
+/* Hero Section */
+.hero-title {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+  z-index: 2;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  animation-delay: 0.3s;
+}
+
+.subtitle-2 {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #ccc;
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  z-index: 2;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+  animation-delay: 0.6s;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+}
+
+/* Digital Samurai Section */
+.digital-samurai-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* About Section */
+.about-image {
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Inspirational Person Section */
 .inspirational-person {
   position: relative;
   overflow: hidden;
   margin-bottom: 20px;
-  width: 300px; /* Adjust as needed */
+  width: 300px;
 }
 
 .image-caption {
@@ -312,19 +373,13 @@ p {
   margin-top: 0.5rem;
 }
 
-.banner-image {
-  width: 100%;
-  height: 450px;
-  object-fit: cover;
-}
-
 .inspirational-person .overlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -334,48 +389,67 @@ p {
 }
 
 .inspirational-person:hover .overlay {
-  opacity: 1; /* Show the overlay on hover */
+  opacity: 1;
 }
 
 .overlay h3,
 .overlay p {
   text-align: center;
   margin: 0;
-  color: white; /* Ensure text is readable */
-}
-
-.overlay h3 {
-  font-size: 1.5rem; /* Adjust as needed */
-  margin-bottom: 0.5rem; /* Space between title and paragraph */
-}
-
-.overlay p {
-  font-size: 1rem; /* Adjust font size for description */
-  line-height: 1.4; /* Improve readability */
-}
-
-/* Banner Section */
-.banner-images {
-  display: flex;
-  justify-content: center;
-  gap: 5px;
-}
-
-/* Hero Section Overlay */
-.hero-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
   color: white;
 }
 
-.hero-title {
-  margin: 0;
+.overlay h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
-.subtitle-2 {
-  margin: 0;
+.overlay p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Banner Section Styling */
+.banner-images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Ensures images stack neatly if they overflow */
+  gap: 20px; /* Space between images */
+  margin: 0 auto;
+  max-width: 1200px; /* Limit the width of the section */
+}
+
+.inspirational-person {
+  position: relative;
+  width: 300px; /* Fixed width for all images */
+  height: 450px; /* Fixed height for all images */
+  overflow: hidden;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures images maintain aspect ratio and fill space */
+}
+
+.inspirational-person .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.inspirational-person:hover .overlay {
+  opacity: 1; /* Overlay appears on hover */
 }
 </style>

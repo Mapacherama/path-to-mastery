@@ -23,3 +23,35 @@ p {
 p {
   letter-spacing: 0.5px;
 }
+
+.btn {
+  background-color: #8a0000;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  font-size: 1rem;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background-color: #a10000;
+}
+
+.btn-purple {
+  background-color: #6a0dad; /* Purple color */
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Adds depth */
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.btn-purple:hover {
+  background-color: #8b3eb2; /* Slightly lighter purple */
+  transform: scale(1.05);
+}
