@@ -26,30 +26,32 @@
         <v-row align="center">
           <v-col cols="12" md="6">
             <h2>About Us</h2>
-            <p>
-              Path to Mastery is a platform designed to inspire individuals to
-              think differently, act boldly, and live authentically. Rooted in
-              the principles of Musashi’s Dokkōdō, Stoicism, Shintoism, and
-              Buddhism, this project reflects a personal journey toward
-              self-mastery and deliberate living.
-            </p>
-            <p>
-              This platform is forged from my journey—like running a marathon
-              alone, fasting, and fueled only by discipline and the refusal to
-              quit.
-            </p>
-            <p>
-              It’s a testament to the power of resilience and relentless
-              self-belief.
-            </p>
-            <p>
-              We blend philosophy, visual inspiration, and interactive tools to
-              challenge societal norms and help others embark on their own paths
-              of growth, discipline, and authenticity.
-            </p>
+            <div class="text-container">
+              <p>
+                Path to Mastery is more than a platform—it’s a call to think
+                boldly, live authentically, and embrace growth. Rooted in
+                timeless philosophies like Musashi’s Dokkōdō and Stoicism, it
+                reflects a journey of self-mastery and purposeful living.
+              </p>
+              <p>
+                Forged through challenges like running a marathon alone while
+                fasting, this project is fueled by discipline, resilience, and
+                the belief that greatness lies in the refusal to quit.
+              </p>
+              <p>
+                We combine philosophy, visual storytelling, and tools for
+                transformation to help others break free from norms and carve
+                their own paths to mastery.
+              </p>
+            </div>
           </v-col>
           <v-col cols="12" md="6">
-            <v-img src="@/assets/about.webp" height="300px" contain></v-img>
+            <v-img
+              src="@/assets/about.webp"
+              height="300px"
+              contain
+              class="about-image"
+            ></v-img>
           </v-col>
         </v-row>
       </v-container>
@@ -211,6 +213,42 @@ const explore = () => {
 </script>
 
 <style scoped>
+h2 {
+  animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+p {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.text-container {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .v-img {
   position: relative;
   background-size: cover;
@@ -264,6 +302,14 @@ const explore = () => {
   overflow: hidden;
   margin-bottom: 20px;
   width: 300px; /* Adjust as needed */
+}
+
+.image-caption {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 0.9rem;
+  color: #bbb;
+  text-align: center;
+  margin-top: 0.5rem;
 }
 
 .banner-image {
