@@ -108,7 +108,7 @@
 
           <div class="hero-overlay">
             <!-- Title -->
-            <h1 class="hero-title hover-text">The Digital Samurai</h1>
+            <h1 class="hero-title hover-text">The Path of Digital Strategy</h1>
 
             <!-- Quote -->
             <blockquote class="subtitle-2 italic mb-4 hover-text">

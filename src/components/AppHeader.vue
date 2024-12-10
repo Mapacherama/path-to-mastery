@@ -16,8 +16,8 @@
     <v-spacer></v-spacer>
     <v-btn text class="mx-2 btn-black" href="#about">About</v-btn>
     <v-btn text class="mx-2 btn-black" href="#journaling">Journaling</v-btn>
-    <v-btn text class="mx-2 btn-black" href="#digitalSamurai"
-      >Digital Samurai</v-btn
+    <v-btn text class="mx-2 btn-black" href="#pathOfDigitalStrategy"
+      >Path of Digital Strategy</v-btn
     >
     <v-btn text class="mx-2 btn-black" href="#routine">Routine</v-btn>
     <v-btn text class="mx-2 btn-black" href="#destinations">Destinations</v-btn>
@@ -53,7 +53,7 @@ const toggleDrawer = () => {
 }
 .header-title {
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: bold;
   text-transform: uppercase;
   position: relative;
