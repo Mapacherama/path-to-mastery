@@ -4,7 +4,7 @@
     <v-toolbar-title>
       <div class="logo-title-wrapper">
         <img
-          src="@/assets/logo.png"
+          src="@/assets/logo.jpg"
           alt="Path to Mastery Logo"
           class="logo-icon"
         />
