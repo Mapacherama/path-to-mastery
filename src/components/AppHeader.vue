@@ -14,7 +14,9 @@
 
     <!-- Navigation Links -->
     <v-spacer></v-spacer>
-    <v-btn text class="mx-2 btn-black" href="#about">About</v-btn>
+    <router-link to="/about" active-class="active">
+      <v-btn text class="mx-2 btn-black">About</v-btn>
+    </router-link>
     <v-btn text class="mx-2 btn-black" href="#journaling">Journaling</v-btn>
     <v-btn text class="mx-2 btn-black" href="#pathOfDigitalStrategy"
       >Path of Digital Strategy</v-btn
