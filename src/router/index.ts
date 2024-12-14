@@ -7,20 +7,25 @@ import {
 // Import the components
 import LandingPage from "@/components/LandingPage.vue";
 import AboutPage from "@/components/AboutPage.vue";
+import PathToDigitalStrategyPage from "@/components/PathToDigitalStrategyPage.vue";
 
 // Define the routes with type annotations
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
     name: "Home",
-    component: LandingPage, // Link Home to LandingPage
+    component: LandingPage,
   },
   {
     path: "/about",
     name: "About",
-    component: AboutPage, // Link Home to LandingPage
+    component: AboutPage,
   },
-  // Add other routes as needed
+  {
+    path: "/path-to-digital-strategy",
+    name: "Path To Digital Strategy",
+    component: PathToDigitalStrategyPage,
+  },
 ];
 
 // Create the router instance
