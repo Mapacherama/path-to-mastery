@@ -25,7 +25,8 @@
       <v-container class="py-10">
         <v-row align="center">
           <v-col cols="12" md="6">
-            <h2>The Power of Timeless Wisdom</h2>
+            <h2 class="mb-4">The Power of Timeless Wisdom</h2>
+            <!-- Added margin -->
             <div class="text-container">
               <p>
                 History is not just a record of the past; it’s a guide to the
@@ -169,3 +170,80 @@
 <script setup lang="ts">
 // Placeholder imports for assets
 </script>
+
+<style scoped>
+.hero-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Add a slight overlay for better text readability */
+  padding: 20px;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.subtitle-1 {
+  font-size: 1.35rem;
+  font-weight: 300;
+  color: #f5f5f5;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
+.subtitle-2 {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: #f5f5f5;
+}
+
+.btn {
+  background-color: #b71c1c;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  text-transform: uppercase;
+  z-index: 12;
+}
+
+.btn:hover {
+  background-color: #d32f2f;
+}
+
+.v-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-overlay h1,
+.hero-overlay blockquote {
+  z-index: 1; /* Ensure text appears above the image */
+}
+
+.hero-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Darker overlay for better contrast */
+  z-index: 0; /* Layer below text */
+}
+
+.hover-text:hover {
+  color: #ffeb3b;
+  transition: color 0.3s ease-in-out;
+}
+</style>

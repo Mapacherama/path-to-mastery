@@ -18,9 +18,9 @@
       <v-btn text class="mx-2 btn-black">About</v-btn>
     </router-link>
     <v-btn text class="mx-2 btn-black" href="#journaling">Journaling</v-btn>
-    <v-btn text class="mx-2 btn-black" href="#pathOfDigitalStrategy"
-      >Path of Digital Strategy</v-btn
-    >
+    <router-link to="/path-to-digital-strategy" class="mx-2">
+      <v-btn text class="btn-black">Path of Digital Strategy</v-btn>
+    </router-link>
     <v-btn text class="mx-2 btn-black" href="#routine">Routine</v-btn>
     <v-btn text class="mx-2 btn-black" href="#destinations">Destinations</v-btn>
     <v-btn text class="mx-2 btn-black" href="#philosophy">Philosophy</v-btn>
